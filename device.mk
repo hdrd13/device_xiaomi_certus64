@@ -77,6 +77,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+# HIDL
+PRODUCT_PACKAGES += \
+    libhwbinder
+
 # KPOC
 PRODUCT_PACKAGES += \
     libsuspend
