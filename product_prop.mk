@@ -50,3 +50,7 @@ PRODUCT_PRODUCT_PROPERTIES  += \
    ro.surface_flinger.vsync_sf_event_phase_offset_ns=830000 \
    ro.surface_flinger.present_time_offset_from_vsync_ns=0
 
+# Display
+PRODUCT_PRODUCT_PROPERTIES  += \
+   ro.sf.lcd_density=320
+
