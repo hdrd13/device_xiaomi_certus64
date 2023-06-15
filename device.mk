@@ -25,6 +25,11 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend \
+    kpoc_charger
+
 # IMS
 PRODUCT_PACKAGES += \
     mtk-ims-telephony
