@@ -30,6 +30,9 @@ PRODUCT_PACKAGES += \
     libsuspend \
     kpoc_charger
 
+# Flatten APEXs for performance
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
 # IMS
 PRODUCT_PACKAGES += \
     mtk-ims-telephony
