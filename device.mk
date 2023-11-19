@@ -68,7 +68,8 @@ PRODUCT_PACKAGES += \
 
 # KPOC
 PRODUCT_PACKAGES += \
-    libsuspend
+    libsuspend \
+    kpoc_charger
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -150,6 +151,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     WifiOverlay
+
+# Android GO
+PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
+
+# Dalvik
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk
+
+# Flatten APEXs for performance
+OVERRIDE_TARGET_FLATTEN_APEX := true
 
 # Call proprietary blob setup
 $(call inherit-product-if-exists, vendor/xiaomi/certus64/certus64-vendor.mk)
